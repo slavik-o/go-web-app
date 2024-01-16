@@ -14,7 +14,7 @@ import (
 	"github.com/markbates/goth/providers/google"
 	"github.com/shareed2k/goth_fiber"
 
-	"github.com/slavik-o/go-skeleton/views"
+	"github.com/slavik-o/go-web-app/views"
 )
 
 func Render(ctx *fiber.Ctx, cmp templ.Component) error {

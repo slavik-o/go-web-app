@@ -1,4 +1,4 @@
-module github.com/slavik-o/go-skeleton
+module github.com/slavik-o/go-web-app
 
 go 1.21.5
 
