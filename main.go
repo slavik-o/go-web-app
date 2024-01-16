@@ -49,8 +49,8 @@ func main() {
 	// App
 	app := fiber.New()
 
-  // Assets
-  app.Static("/", "./assets")
+	// Assets
+	app.Static("/", "./assets")
 
 	// Middleware
 	app.Use(logger.New())
