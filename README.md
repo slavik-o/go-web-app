@@ -1,6 +1,6 @@
 # Go web app
 
-Go Fiber + Gothic + Templ + TailwindCSS
+Go Fiber + GORM + SQLite + Gothic + Templ + TailwindCSS
 
 ## Install
 
