@@ -12,9 +12,6 @@ import (
 func NewApp() *fiber.App {
 	app := fiber.New()
 
-	// Assets
-	app.Static("/", "./assets")
-
 	// Middleware
 	app.Use(logger.New())
 	app.Use(recover.New())
@@ -22,6 +19,9 @@ func NewApp() *fiber.App {
 	app.Use(encryptcookie.New(encryptcookie.Config{
 		Key: os.Getenv("COOKIE_SECRET"),
 	}))
+
+	// Assets
+	app.Static("/", "./assets")
 
 	return app
 }

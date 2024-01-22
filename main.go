@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/slavik-o/go-web-app/controllers"
+	"github.com/slavik-o/go-web-app/handlers"
 	"github.com/slavik-o/go-web-app/middlewares"
 )
 
@@ -20,12 +20,12 @@ func main() {
 	app := NewApp()
 
 	// Routes
-	app.Get("/", middlewares.AuthRequired, controllers.GetIndex)
+	app.Get("/", middlewares.AuthRequired, handlers.GetIndex)
 
-	app.Get("/login", controllers.GetLogin)
-	app.Get("/logout", controllers.GetLogout)
-	app.Get("/auth/:provider", controllers.GetAuthProvider)
-	app.Get("/auth/:provider/callback", controllers.GetAuthProviderCallback)
+	app.Get("/login", handlers.GetLogin)
+	app.Get("/logout", handlers.GetLogout)
+	app.Get("/auth/:provider", handlers.GetAuthProvider)
+	app.Get("/auth/:provider/callback", handlers.GetAuthProviderCallback)
 
 	// Run
 	log.Fatal(app.Listen(os.Getenv("BIND_URL")))
